@@ -1,0 +1,21 @@
+name: "Mosquitto Broker"
+version: "1.0.0"
+slug: mosquitto
+description: "Eclipse Mosquitto MQTT Broker"
+url: "https://github.com/seoeaa/ha-mosquitto-addon"
+arch:
+  - armv7
+  - aarch64
+  - amd64
+startup: application
+boot: auto
+init: false
+ports:
+  1883/tcp: 1883
+ports_description:
+  1883/tcp: "MQTT Broker"
+options:
+  log_level: "info"
+schema:
+  log_level: str
+image: "ghcr.io/seoeaa/ha-mosquitto-addon-{arch}"
